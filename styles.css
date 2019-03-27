@@ -12,8 +12,40 @@ h1 {
 }
 .clock {
   position: relative;
+  margin: auto;
   height: 200px;
   width: 200px;
   border: blue 8px solid;
   border-radius: 50%;
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 1.7, 0.58, 1);
+}
+
+.second {
+  background: white;
+  height: 3px;
+}
+.minute {
+  background: grey;
+}
+.hour {
+  width: 50%;
+  height: 10px;
 }
