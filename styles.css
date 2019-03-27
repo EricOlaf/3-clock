@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: darkgoldenrod;
+  background-size: cover;
+}
+h1 {
+  text-align: center;
+}
+.clock {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border: blue 8px solid;
+  border-radius: 50%;
+}
