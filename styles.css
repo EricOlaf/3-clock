@@ -1,21 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Pacifico";
 }
+
 body {
-  background-color: darkgoldenrod;
+  background: url(https://lonelyplanetstatic.imgix.net/op-video-sync/images/production/p-5743221176001-brightcove-island-life-the-best-beaches-in-hawaii-20180309-152803.jpg);
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  position: relative;
+  align-content: space-around;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  position: absolute;
+  background: linear-gradient(60deg, purple, orange, yellow);
 }
 h1 {
+  padding: 100px 0;
+  position: relative;
   text-align: center;
+  color: white;
+  font-size: 60px;
+  letter-spacing: 10px;
 }
 .clock {
   position: relative;
-  margin: auto;
-  height: 200px;
-  width: 200px;
-  border: blue 8px solid;
+  height: 300px;
+  width: 300px;
+  border: white 10px solid;
   border-radius: 50%;
 }
 
@@ -29,23 +50,27 @@ h1 {
 .hand {
   width: 50%;
   height: 6px;
-  background: black;
   position: absolute;
   top: 50%;
   transform-origin: 100%;
   transform: rotate(90deg);
   transition: all 0.05s;
   transition-timing-function: cubic-bezier(0.1, 1.7, 0.58, 1);
+  border: 0.3px solid white;
 }
 
 .second {
   background: white;
-  height: 3px;
+  height: 4px;
+  border: none;
 }
 .minute {
-  background: grey;
+  background: gray;
+  box-shadow: 0 0 2px white;
 }
 .hour {
   width: 50%;
   height: 10px;
+  background: orange;
+  box-shadow: 0 0 2px white;
 }
